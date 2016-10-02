@@ -1,29 +1,29 @@
-# Add hero class in shared folder
+# Modify HTML codes
+```html
+  <h1>{{title}}</h1>
+  <h2>{{hero.name}} details!</h2>
+  <div><label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input value="{{hero.name}}" placeholder="name">
+  </div>
+```
 
-## Apply hero class 
+## Add or Make sure FormsModule has been applied in app.module.ts 
 1 add codes into /src/app/shared/models/hero.class.ts 
 ```typescript
-export class Hero {
-  id: number;
-  name: string;
-}
+import { FormsModule }   from '@angular/forms';
+
+@NgModule({
+  imports: [
+    ...
+    FormsModule
+  ],
+  ...
+})
+export class AppModule { }
 ```
-2. add import into /src/app/app.component.ts
-```typescript
-import { Hero } from './shared/models/hero.class';
-```
-3. add codes into /src/app/app.component.ts AppComponent
-```typescript
-  title = 'Tour of Hero';
-  hero: Hero = {
-    id: 1,
-    name: 'windstorm'
-  };
-```
-4. Add codes in /src/app/app.component.html
+## Modify input area to two-way binding
 ```html
-<h2>{{title}}</h2>
-<h3>{{hero.name}} details!</h3>
-<div><label>id: </label>{{hero.id}}</div>
-<div><label>name: </label>{{hero.name}}</div>
+<input value="{{hero.name}}" placeholder="name">
 ```

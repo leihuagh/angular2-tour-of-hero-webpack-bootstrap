@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import '../style/app.scss';
+import { Hero } from './shared/models/hero.class';
 
 @Component({
   selector: 'my-app', // <my-app></my-app>
@@ -8,5 +9,8 @@ import '../style/app.scss';
 })
 export class AppComponent {
   title = 'Tour of Hero';
-  hero = 'winstorm';
+  hero: Hero = {
+    id: 1,
+    name: 'windstorm'
+  };
 }

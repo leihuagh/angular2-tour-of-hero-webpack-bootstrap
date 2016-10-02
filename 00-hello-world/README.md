@@ -1,11 +1,22 @@
-# Purpose for this repository
-
-1. Learn angular 2 via tour of hero
-2. Learn webpack based angular 2 app
-3. Test bootstrap 4 working with angular 2
-
-## Installation
+# Add title and hero 
+1. open /src/app.component.ts
+2. add the codes below into AppComponent
+```typescript
+export class AppComponent {
+  "title = 'Tour of Heroes'";
+  "hero = 'Windstorm'";
+}
 ```
-$ npm install 
-$ npm start
+3. add codes in /src/app.component.html
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h1>{{title}}</h1>
+      <h2>{{hero}}</h2>
+    </div>
+    <!-- /.col -->    
+  </div>
+  <!-- /.row -->
+</div>
 ```

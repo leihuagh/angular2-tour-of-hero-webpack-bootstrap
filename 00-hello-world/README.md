@@ -1,13 +1,13 @@
 # Add title and hero 
-1. open /src/app.component.ts
-2. add the codes below into AppComponent
+- open /src/app.component.ts
+- add the codes below into AppComponent
 ```typescript
 export class AppComponent {
   "title = 'Tour of Heroes'";
   "hero = 'Windstorm'";
 }
 ```
-3. add codes in /src/app.component.html
+- add codes in /src/app.component.html
 ```html
 <div class="container">
   <div class="row">

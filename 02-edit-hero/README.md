@@ -25,5 +25,5 @@ export class AppModule { }
 ```
 ## Modify input area to two-way binding
 ```html
-<input value="{{hero.name}}" placeholder="name">
+<input [(ngModel)]="hero.name" placeholder="name">
 ```

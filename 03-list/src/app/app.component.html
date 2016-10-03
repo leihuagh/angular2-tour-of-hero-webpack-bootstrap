@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>My Heroes</h2>
+      <ul class="heroes">
+        <li *ngFor="let hero of heroes">
+          <div class="card">
+            <img class="card-img-top" src="./img/hero.svg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>{{title}}</h2>
+      <h3>{{hero.name}} details!</h3>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name">
+      </div>
+    </div>
+    <!-- /.col -->    
+  </div>
+  <!-- /.row -->
+</div>

@@ -1,0 +1,42 @@
+<div class="container">  
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4" *ngFor="let hero of heroes">
+          <div class="card">
+            <img class="card-img-top center-block product-item" src="{{hero.image}}" alt="{{hero.name}}">
+            <div class="card-block text-xs-center">
+              <h4 class="card-title">{{hero.name}}</h4>
+              <h4 class="card-subtitle"><span class="label label-success">ID: {{hero.id}}</span></h4>
+              <hr>
+              <div class="btn-group" role="group">
+                <button 
+                [class.selected]="hero === selectedHero"
+                (click)="OnSelected(hero)">Select</button>
+              </div>
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col --> 
+      </div>
+      <!-- /.row -->
+    </div><!-- /.col -->
+    <div class="col-md-3" *ngIf="selectedHero">
+      <div class="card">
+        <img class="card-img-top center-block product-item" src="{{selectedHero.image}}" alt="Product 6">
+        <div class="card-block text-xs-center">
+          <h4 class="card-title">{{selectedHero.name}}</h4>
+          <h4 class="card-subtitle"><span class="label label-success">ID: {{selectedHero.id}}</span></h4>
+          <hr>
+          <div class="editing">
+            <label>name: </label>
+            <span><input [(ngModel)]="selectedHero.name" placeholder="name"></span>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <!-- /.col -->    
+  </div>
+  <!-- /.row -->
+</div>

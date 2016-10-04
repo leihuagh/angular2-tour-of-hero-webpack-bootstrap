@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'hero-list',
+    selector: 'my-hero-list',
     templateUrl: './hero-list.component.html',
     styleUrls: ['./hero-list.component.scss']
 })
-export class HeroListComponent{}
+export class HeroListComponent {}

@@ -14,4 +14,4 @@ import { HeroDetailComponent } from './hero-detail.component';
     ],
     providers: []
 })
-export class HeroesModule{}
+export class HeroesModule {}

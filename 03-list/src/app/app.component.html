@@ -10,7 +10,9 @@
               <h4 class="card-subtitle"><span class="label label-success">ID: {{hero.id}}</span></h4>
               <hr>
               <div class="btn-group" role="group">
-                <button class="btn btn-primary" (click)="OnSelected(hero)">Select</button>
+                <button 
+                [class.selected]="hero === selectedHero"
+                (click)="OnSelected(hero)">Select</button>
               </div>
             </div>
           </div>
@@ -27,7 +29,7 @@
           <h4 class="card-title">{{selectedHero.name}}</h4>
           <h4 class="card-subtitle"><span class="label label-success">ID: {{selectedHero.id}}</span></h4>
           <hr>
-          <div>
+          <div class="editing">
             <label>name: </label>
             <span><input [(ngModel)]="selectedHero.name" placeholder="name"></span>
           </div>

@@ -36,6 +36,21 @@ body {
     color: #333;
 }
 
+.card button {
+    background-color: #00f;
+    color: $white;
+    border: none;
+}
+
+.card button.selected {
+    background-color: #f00;
+}
+
+.card .editing {
+    height: 26px;
+}
+
 .card input {
     width: 120px;
+    height: 20px;
 }

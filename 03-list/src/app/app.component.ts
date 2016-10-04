@@ -13,9 +13,15 @@ export class AppComponent {
   hero: Hero = {
     id: 1,
     name: 'windstorm',
-    image: 'img/200x200.png',
+    image: 'img/270x171.png',
     level: 1
   };
 
   heroes = HEROES;
+
+  selectedHero: Hero;
+
+  OnSelected(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }

@@ -10,8 +10,7 @@
               <h4 class="card-subtitle"><span class="label label-success">ID: {{hero.id}}</span></h4>
               <hr>
               <div class="btn-group" role="group">
-                <button class="btn btn-primary">Buy</button>
-                <button class="btn btn-info">Info</button>
+                <button class="btn btn-primary" (click)="OnSelected(hero)">Select</button>
               </div>
             </div>
           </div>
@@ -21,13 +20,19 @@
       </div>
       <!-- /.row -->
     </div><!-- /.col -->
-    <div class="col-md-3">
-      <h2>{{title}}</h2>
-      <h3>{{hero.name}} details!</h3>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name">
-      </div>
+    <div class="col-md-3" *ngIf="selectedHero">
+      <div class="card">
+        <img class="card-img-top center-block product-item" src="{{selectedHero.image}}" alt="Product 6">
+        <div class="card-block text-xs-center">
+          <h4 class="card-title">{{selectedHero.name}}</h4>
+          <h4 class="card-subtitle"><span class="label label-success">ID: {{selectedHero.id}}</span></h4>
+          <hr>
+          <div>
+            <label>name: </label>
+            <span><input [(ngModel)]="selectedHero.name" placeholder="name"></span>
+          </div>
+        </div>
+      </div>      
     </div>
     <!-- /.col -->    
   </div>

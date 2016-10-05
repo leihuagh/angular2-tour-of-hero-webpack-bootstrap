@@ -22,20 +22,7 @@
       </div>
       <!-- /.row -->
     </div><!-- /.col -->
-    <div class="col-md-3" *ngIf="selectedHero">
-      <div class="card">
-        <img class="card-img-top center-block product-item" src="{{selectedHero.image}}" alt="Product 6">
-        <div class="card-block text-xs-center">
-          <h4 class="card-title">{{selectedHero.name}}</h4>
-          <h4 class="card-subtitle"><span class="label label-success">ID: {{selectedHero.id}}</span></h4>
-          <hr>
-          <div class="editing">
-            <label>name: </label>
-            <span><input [(ngModel)]="selectedHero.name" placeholder="name"></span>
-          </div>
-        </div>
-      </div>      
-    </div>
+    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
     <!-- /.col -->    
   </div>
   <!-- /.row -->

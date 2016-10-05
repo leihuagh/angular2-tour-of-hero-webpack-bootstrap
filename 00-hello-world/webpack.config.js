@@ -56,7 +56,7 @@ module.exports = function makeWebpackConfig() {
       },
       {test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file?name=fonts/[name].[hash].[ext]?'},
       {test: /\.json$/, loader: 'json'},
-      { test: /\.jade$/, loader: 'jade-loader' },
+      { test: /\.pug$/, loader: 'pug-loader' },
       {
         test: /\.css$/,
         exclude: root('src', 'app'),

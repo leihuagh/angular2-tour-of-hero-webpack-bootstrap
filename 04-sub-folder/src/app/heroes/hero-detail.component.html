@@ -1,0 +1,14 @@
+<div class="col-md-3" *ngIf="hero">
+    <div class="card">
+    <img class="card-img-top center-block product-item" src="{{hero.image}}" alt="{{hero.name}}">
+    <div class="card-block text-xs-center">
+        <h4 class="card-title">{{hero.name}}</h4>
+        <h4 class="card-subtitle"><span class="label label-success">ID: {{hero.id}}</span></h4>
+        <hr>
+        <div class="editing">
+        <label>name: </label>
+        <span><input [(ngModel)]="hero.name" placeholder="name"></span>
+        </div>
+    </div>
+    </div>      
+</div>
